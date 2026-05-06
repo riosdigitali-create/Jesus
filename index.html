@@ -1,0 +1,2171 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Ismael Rios — Curriculum</title>
+<meta name="description" content="Resumen / Hoja de vida — Ismael Rios · Estratega Comercial &amp; Arquitecto de Ecosistemas Digitales.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Anton&family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;1,400;1,500&family=Sacramento&family=Inter:wght@300;400;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+<style>
+*, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+:root {
+  --paper: #ebe7e0;
+  --paper-2: #ddd8cf;
+  --paper-soft: #f1ede5;
+  --ink: #131313;
+  --ink-soft: #2a2a2a;
+  --sub: #555;
+  --faint: #888;
+  --red: #d11a2a;
+  --red-deep: #a41320;
+  --gold: #b08947;
+  --line: #c8c2b6;
+  --line-soft: #d8d2c5;
+}
+
+html { font-size: 15px; scroll-behavior: smooth; }
+
+body {
+  background: var(--paper);
+  color: var(--ink);
+  font-family: 'Inter', -apple-system, sans-serif;
+  font-weight: 400;
+  line-height: 1.55;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  position: relative;
+  min-height: 100vh;
+  -webkit-print-color-adjust: exact;
+  print-color-adjust: exact;
+}
+
+* {
+  -webkit-print-color-adjust: exact;
+  print-color-adjust: exact;
+}
+
+/* Paper texture */
+body::before {
+  content: '';
+  position: fixed;
+  inset: 0;
+  pointer-events: none;
+  z-index: 0;
+  background-image:
+    radial-gradient(ellipse at 20% 10%, rgba(0,0,0,0.04) 0%, transparent 50%),
+    radial-gradient(ellipse at 80% 80%, rgba(0,0,0,0.05) 0%, transparent 55%),
+    url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='420' height='420'><filter id='n'><feTurbulence type='fractalNoise' baseFrequency='0.85' numOctaves='2' stitchTiles='stitch'/><feColorMatrix values='0 0 0 0 0  0 0 0 0 0  0 0 0 0 0  0 0 0 0.07 0'/></filter><rect width='100%25' height='100%25' filter='url(%23n)'/></svg>");
+  background-size: cover, cover, 420px 420px;
+  mix-blend-mode: multiply;
+  opacity: .95;
+}
+
+body::after {
+  content: '';
+  position: fixed;
+  inset: 0;
+  pointer-events: none;
+  z-index: 0;
+  background:
+    repeating-linear-gradient(180deg, rgba(0,0,0,0.012) 0 2px, transparent 2px 6px);
+  opacity: .6;
+}
+
+::selection { background: var(--red); color: #fff; }
+
+/* ──────── PRINT BUTTON ──────── */
+.print-fab {
+  position: fixed;
+  top: 22px; right: 22px;
+  z-index: 100;
+  background: var(--ink);
+  color: var(--paper);
+  border: none;
+  padding: 11px 18px;
+  font-family: 'JetBrains Mono', monospace;
+  font-size: .68rem;
+  letter-spacing: .16em;
+  text-transform: uppercase;
+  cursor: pointer;
+  transition: all .25s;
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  box-shadow: 0 4px 14px rgba(0,0,0,.2);
+}
+
+.print-fab:hover { background: var(--red); }
+.print-fab svg { width: 14px; height: 14px; }
+
+/* ──────── PAGE / FRAME ──────── */
+.page {
+  position: relative;
+  z-index: 1;
+  max-width: 1180px;
+  margin: 0 auto;
+  padding: 60px 60px 60px;
+}
+
+.frame {
+  position: absolute;
+  inset: 30px;
+  border: 1.5px dashed rgba(20,20,20,0.32);
+  pointer-events: none;
+  z-index: 0;
+}
+
+.page > * { position: relative; z-index: 1; }
+
+/* ──────── HEADER ──────── */
+.top-tag {
+  font-family: 'Cormorant Garamond', serif;
+  font-style: italic;
+  font-weight: 400;
+  font-size: 1.15rem;
+  color: var(--ink);
+  letter-spacing: .02em;
+  margin-bottom: 6px;
+  padding-left: 4px;
+  display: flex;
+  align-items: center;
+  gap: 16px;
+}
+
+.top-tag-rule {
+  display: inline-block;
+  width: 70px;
+  height: 1px;
+  background: var(--ink);
+}
+
+.top-tag-meta {
+  margin-left: auto;
+  font-family: 'JetBrains Mono', monospace;
+  font-style: normal;
+  font-size: .68rem;
+  letter-spacing: .2em;
+  text-transform: uppercase;
+  color: var(--sub);
+}
+
+.curriculum-title {
+  font-family: 'Anton', sans-serif;
+  font-weight: 400;
+  font-size: clamp(5rem, 13vw, 11rem);
+  line-height: .85;
+  letter-spacing: .14em;
+  color: var(--ink);
+  text-transform: uppercase;
+  position: relative;
+  margin-bottom: 18px;
+}
+
+.curriculum-title::after {
+  content: 'CURRICULUM';
+  position: absolute;
+  left: 0; right: 0; top: .55em;
+  font-family: inherit;
+  font-size: inherit;
+  letter-spacing: inherit;
+  color: transparent;
+  -webkit-text-stroke: 1.5px rgba(20,20,20,0.18);
+  z-index: -1;
+  transform: translateY(2px);
+}
+
+/* ──────── HERO HOOK ──────── */
+.hero-hook {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 40px;
+  align-items: end;
+  padding: 6px 4px 18px;
+  border-bottom: 1px dashed rgba(20,20,20,0.3);
+  margin-bottom: 26px;
+}
+
+.hook-line {
+  font-family: 'Cormorant Garamond', serif;
+  font-weight: 500;
+  font-size: 1.55rem;
+  line-height: 1.2;
+  color: var(--ink);
+  letter-spacing: -.005em;
+}
+
+.hook-line em {
+  font-style: italic;
+  color: var(--red-deep);
+  font-weight: 500;
+}
+
+.hook-line strong { font-weight: 700; }
+
+.hook-meta {
+  font-family: 'Cormorant Garamond', serif;
+  font-style: italic;
+  font-size: 1.08rem;
+  color: var(--sub);
+  text-align: right;
+  line-height: 1.4;
+}
+
+.hook-meta .gold {
+  color: var(--gold);
+  font-weight: 600;
+  letter-spacing: .04em;
+  text-transform: uppercase;
+  font-size: .82rem;
+  font-style: normal;
+  font-family: 'JetBrains Mono', monospace;
+  display: block;
+  margin-top: 4px;
+}
+
+/* ──────── STATS STRIP ──────── */
+.stats-strip {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 0;
+  border-top: 1.5px solid var(--ink);
+  border-bottom: 1.5px solid var(--ink);
+  margin-bottom: 36px;
+  background: var(--paper-soft);
+}
+
+.stat {
+  padding: 18px 18px 16px;
+  border-right: 1px dashed rgba(20,20,20,0.28);
+  position: relative;
+}
+
+.stat:last-child { border-right: none; }
+
+.stat-num {
+  font-family: 'Anton', sans-serif;
+  font-size: 2.6rem;
+  line-height: 1;
+  color: var(--ink);
+  letter-spacing: .02em;
+  margin-bottom: 4px;
+  display: flex;
+  align-items: baseline;
+  gap: 6px;
+}
+
+.stat-num em {
+  font-style: normal;
+  color: var(--red);
+  font-size: 1.4rem;
+}
+
+.stat-label {
+  font-family: 'JetBrains Mono', monospace;
+  font-size: .66rem;
+  letter-spacing: .12em;
+  text-transform: uppercase;
+  color: var(--sub);
+  line-height: 1.4;
+}
+
+/* ──────── MAIN GRID ──────── */
+.grid {
+  display: grid;
+  grid-template-columns: 1fr 1.4fr;
+  gap: 50px;
+  align-items: start;
+  margin-bottom: 40px;
+}
+
+/* ════════ LEFT COLUMN ════════ */
+.left { position: relative; }
+
+.photo-wrap {
+  position: relative;
+  margin-bottom: 26px;
+  min-height: 440px;
+  display: flex;
+  align-items: flex-end;
+  justify-content: center;
+}
+
+.ghost-name {
+  position: absolute;
+  inset: 0;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: center;
+  font-family: 'Anton', sans-serif;
+  font-weight: 400;
+  font-size: clamp(7rem, 16vw, 12rem);
+  line-height: .82;
+  letter-spacing: .04em;
+  color: transparent;
+  -webkit-text-stroke: 1.2px rgba(20,20,20,0.32);
+  text-transform: uppercase;
+  pointer-events: none;
+  z-index: 0;
+  padding-top: 14px;
+  user-select: none;
+}
+
+.ghost-name span:nth-child(2) { transform: translateX(-4px); }
+
+.photo {
+  position: relative;
+  z-index: 1;
+  max-width: 100%;
+  width: 360px;
+  height: auto;
+  filter: grayscale(100%) contrast(1.05);
+  display: block;
+  margin: 0 auto;
+}
+
+.signature {
+  font-family: 'Sacramento', cursive;
+  font-size: 4.2rem;
+  color: var(--red);
+  line-height: .9;
+  margin: -28px 0 14px 16px;
+  position: relative;
+  z-index: 2;
+  transform: rotate(-4deg);
+}
+
+.identity {
+  text-align: center;
+  margin-bottom: 18px;
+}
+
+.identity-name {
+  font-family: 'Anton', sans-serif;
+  font-weight: 400;
+  font-size: 2.4rem;
+  letter-spacing: .04em;
+  color: var(--ink);
+  text-transform: uppercase;
+  line-height: 1;
+  margin-bottom: 6px;
+}
+
+.identity-role {
+  font-family: 'Cormorant Garamond', serif;
+  font-style: italic;
+  font-weight: 500;
+  font-size: 1.05rem;
+  color: var(--ink-soft);
+  line-height: 1.3;
+}
+
+.identity-mark {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  font-family: 'JetBrains Mono', monospace;
+  font-size: .62rem;
+  letter-spacing: .2em;
+  text-transform: uppercase;
+  color: var(--gold);
+  margin-top: 10px;
+}
+
+.identity-mark::before,
+.identity-mark::after {
+  content: '';
+  width: 22px;
+  height: 1px;
+  background: var(--gold);
+}
+
+/* SOCIAL */
+.social {
+  display: flex;
+  flex-direction: column;
+  gap: 9px;
+  margin: 0 auto 22px;
+  padding: 16px 18px;
+  background: var(--paper-soft);
+  border: 1px solid var(--line);
+}
+
+.social-row {
+  display: flex;
+  align-items: center;
+  gap: 11px;
+  font-size: .86rem;
+  color: var(--ink);
+}
+
+.social-icon {
+  width: 26px; height: 26px;
+  background: var(--ink);
+  color: var(--paper);
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+}
+
+.social-icon svg { width: 13px; height: 13px; fill: currentColor; }
+
+.social a {
+  color: inherit;
+  text-decoration: none;
+  border-bottom: 1px solid transparent;
+  transition: border .2s;
+}
+
+.social a:hover { border-color: var(--red); }
+
+/* BIO */
+.bio {
+  font-size: .9rem;
+  line-height: 1.65;
+  color: var(--ink-soft);
+  text-align: justify;
+  hyphens: auto;
+  margin-bottom: 22px;
+}
+
+.bio p + p { margin-top: 10px; }
+.bio strong { font-weight: 600; color: var(--ink); }
+.bio em { font-style: italic; color: var(--red-deep); font-weight: 500; }
+
+/* INDUSTRIES */
+.industries {
+  margin-top: 16px;
+}
+
+.industries-label {
+  font-family: 'JetBrains Mono', monospace;
+  font-size: .64rem;
+  letter-spacing: .2em;
+  text-transform: uppercase;
+  color: var(--gold);
+  margin-bottom: 10px;
+}
+
+.industries-list {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 6px;
+  list-style: none;
+}
+
+.industries-list li {
+  font-family: 'JetBrains Mono', monospace;
+  font-size: .68rem;
+  letter-spacing: .06em;
+  text-transform: uppercase;
+  padding: 4px 9px;
+  border: 1px solid var(--ink);
+  background: transparent;
+  color: var(--ink);
+}
+
+/* ════════ RIGHT COLUMN — ABOUT/PERFIL ════════ */
+.right { padding-top: 0; }
+
+.about-col { padding-top: 8px; }
+
+.about-head { margin-bottom: 18px; }
+
+.about-kicker {
+  font-family: 'JetBrains Mono', monospace;
+  font-size: .68rem;
+  letter-spacing: .22em;
+  text-transform: uppercase;
+  color: var(--gold);
+  margin-bottom: 6px;
+}
+
+.about-title {
+  font-family: 'Anton', sans-serif;
+  font-weight: 400;
+  font-size: 3.4rem;
+  letter-spacing: .03em;
+  color: var(--ink);
+  text-transform: uppercase;
+  line-height: 1;
+  padding-bottom: 14px;
+  border-bottom: 1.5px solid var(--ink);
+}
+
+.about-title em {
+  font-family: 'Cormorant Garamond', serif;
+  font-style: italic;
+  font-weight: 600;
+  text-transform: lowercase;
+  font-size: 3rem;
+  color: var(--red);
+  letter-spacing: -.01em;
+  margin-left: 6px;
+}
+
+/* Lead bio — drop-cap on first paragraph */
+.bio--lead p:first-child::first-letter {
+  font-family: 'Anton', sans-serif;
+  font-size: 4.4rem;
+  line-height: .85;
+  float: left;
+  margin: 4px 12px 0 0;
+  color: var(--ink);
+  letter-spacing: .02em;
+}
+
+.bio--lead {
+  font-size: .95rem;
+  line-height: 1.7;
+}
+
+.bio--lead p + p { margin-top: 14px; }
+
+.industries--right {
+  margin-top: 22px;
+  padding-top: 16px;
+  border-top: 1px dashed rgba(20,20,20,0.25);
+}
+
+/* ──── SERVICES / "Lo que entrego" ──── */
+.services-card {
+  margin-top: 26px;
+  padding-top: 20px;
+  border-top: 1px dashed rgba(20,20,20,0.25);
+}
+
+.services-kicker {
+  font-family: 'JetBrains Mono', monospace;
+  font-size: .68rem;
+  letter-spacing: .22em;
+  text-transform: uppercase;
+  color: var(--gold);
+  margin-bottom: 14px;
+}
+
+.services-list {
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+}
+
+.services-list li {
+  display: grid;
+  grid-template-columns: 38px 1fr;
+  gap: 14px;
+  padding: 12px 0;
+  border-bottom: 1px dashed rgba(20,20,20,0.16);
+  align-items: start;
+  transition: padding .25s, background .25s;
+}
+
+.services-list li:last-child { border-bottom: none; }
+
+.services-list li:hover { padding-left: 6px; }
+.services-list li:hover .srv-num { color: var(--ink); }
+
+.srv-num {
+  font-family: 'Anton', sans-serif;
+  font-size: 1.7rem;
+  color: var(--red);
+  letter-spacing: .04em;
+  line-height: 1;
+  padding-top: 1px;
+  transition: color .25s;
+}
+
+.srv-body strong {
+  display: block;
+  font-family: 'Cormorant Garamond', serif;
+  font-weight: 600;
+  font-size: 1.2rem;
+  color: var(--ink);
+  letter-spacing: -.005em;
+  line-height: 1.2;
+  margin-bottom: 4px;
+}
+
+.srv-body span {
+  display: block;
+  font-size: .82rem;
+  line-height: 1.5;
+  color: var(--sub);
+}
+
+/* ──── PULL QUOTE ──── */
+.pull-quote {
+  position: relative;
+  margin-top: 32px;
+  padding: 28px 26px 22px;
+  background: var(--ink);
+  color: var(--paper);
+}
+
+.pull-quote::before {
+  content: '"';
+  position: absolute;
+  top: -22px; left: 16px;
+  font-family: 'Anton', sans-serif;
+  font-size: 6.5rem;
+  line-height: 1;
+  color: var(--red);
+  letter-spacing: -.05em;
+}
+
+.pull-quote::after {
+  content: '';
+  position: absolute;
+  top: -1px; right: -1px;
+  width: 22px; height: 22px;
+  border-top: 2px solid var(--gold);
+  border-right: 2px solid var(--gold);
+}
+
+.pull-quote p {
+  font-family: 'Cormorant Garamond', serif;
+  font-style: italic;
+  font-weight: 500;
+  font-size: 1.45rem;
+  line-height: 1.3;
+  letter-spacing: -.005em;
+  margin: 0;
+}
+
+.pull-quote p em {
+  font-style: italic;
+  color: var(--red);
+  font-weight: 600;
+}
+
+.pull-quote cite {
+  display: block;
+  margin-top: 14px;
+  padding-top: 12px;
+  border-top: 1px solid #2a2a2a;
+  font-family: 'JetBrains Mono', monospace;
+  font-size: .68rem;
+  font-style: normal;
+  letter-spacing: .18em;
+  text-transform: uppercase;
+  color: #8a857a;
+}
+
+.section { margin-bottom: 36px; }
+.section:last-child { margin-bottom: 0; }
+
+.section-title {
+  font-family: 'Anton', sans-serif;
+  font-weight: 400;
+  font-size: 2.1rem;
+  letter-spacing: .04em;
+  color: var(--ink);
+  text-transform: uppercase;
+  line-height: 1;
+  margin-bottom: 2px;
+}
+
+.section-sub {
+  font-family: 'Cormorant Garamond', serif;
+  font-style: italic;
+  font-weight: 400;
+  font-size: 1.02rem;
+  color: var(--sub);
+  margin-bottom: 18px;
+  padding-bottom: 10px;
+  border-bottom: 1px dashed rgba(20,20,20,0.25);
+}
+
+/* ════════ EXP. PROFESIONAL — full-width section ════════ */
+.exp-section .exp-list {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 0;
+}
+
+.exp-block {
+  display: grid;
+  grid-template-columns: 260px 1fr;
+  gap: 50px;
+  padding: 22px 0 22px;
+  border-bottom: 1px dashed rgba(20,20,20,0.22);
+  align-items: start;
+}
+
+.exp-block:first-child { padding-top: 6px; }
+.exp-block:last-child { border-bottom: none; padding-bottom: 0; }
+
+.exp-block.featured {
+  background: var(--paper-soft);
+  padding: 22px 24px;
+  margin: 14px 0 14px;
+  border: 1px solid var(--line);
+  border-left: 3px solid var(--red);
+}
+
+.exp-block.featured + .exp-block { padding-top: 26px; }
+
+.exp-meta { padding-top: 4px; }
+.exp-content { min-width: 0; }
+
+.exp-head {
+  font-family: 'Inter', sans-serif;
+  font-weight: 700;
+  font-size: 1.05rem;
+  color: var(--ink);
+  margin-bottom: 4px;
+  letter-spacing: -.005em;
+}
+
+.exp-head .sep { color: var(--red); margin: 0 6px; font-weight: 400; }
+
+.exp-head .place {
+  background: var(--ink);
+  color: var(--paper);
+  padding: 2px 10px;
+  font-size: .78rem;
+  font-weight: 500;
+  letter-spacing: .04em;
+  margin-left: 4px;
+  display: inline-block;
+}
+
+.exp-role {
+  font-family: 'Cormorant Garamond', serif;
+  font-style: italic;
+  font-weight: 500;
+  font-size: .94rem;
+  color: var(--sub);
+  margin-bottom: 8px;
+}
+
+.exp-desc {
+  font-size: .86rem;
+  line-height: 1.55;
+  color: var(--ink-soft);
+  margin-bottom: 6px;
+}
+
+.exp-desc strong { color: var(--ink); font-weight: 600; }
+
+.result,
+.exp-desc .result,
+.exp-bullets .result {
+  background: linear-gradient(transparent 60%, rgba(209, 26, 42, 0.20) 60%);
+  font-weight: 500;
+}
+
+.exp-bullets {
+  list-style: none;
+  margin: 6px 0 6px;
+  padding: 0;
+  display: grid;
+  gap: 4px;
+}
+
+.exp-bullets li {
+  font-size: .82rem;
+  line-height: 1.5;
+  color: var(--ink-soft);
+  padding-left: 16px;
+  position: relative;
+}
+
+.exp-bullets li strong { color: var(--ink); font-weight: 600; }
+
+.exp-bullets li::before {
+  content: '';
+  position: absolute;
+  left: 0; top: .65em;
+  width: 8px; height: 1px;
+  background: var(--red);
+}
+
+.exp-period {
+  display: inline-block;
+  font-family: 'JetBrains Mono', monospace;
+  font-size: .7rem;
+  font-weight: 500;
+  color: var(--red);
+  letter-spacing: .08em;
+  padding: 4px 0 0;
+}
+
+/* ════════ FULL-WIDTH SKILLS ════════ */
+.full-section {
+  margin-top: 30px;
+  padding-top: 30px;
+  border-top: 1.5px solid var(--ink);
+}
+
+.full-section .section-head {
+  margin-bottom: 24px;
+  padding-bottom: 12px;
+  border-bottom: 1px dashed rgba(20,20,20,0.25);
+}
+
+.full-section .section-title {
+  font-size: 2.4rem;
+  margin-bottom: 4px;
+}
+
+.full-section .section-sub {
+  margin: 0;
+  padding: 0;
+  border: none;
+  font-size: 1rem;
+}
+
+/* ──── EDITORIAL SKILL BARS ──── */
+.skills-cols {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 60px;
+  align-items: start;
+}
+
+.skills-cat {
+  font-family: 'JetBrains Mono', monospace;
+  font-size: .7rem;
+  letter-spacing: .22em;
+  text-transform: uppercase;
+  color: var(--red);
+  margin: 0 0 14px;
+  padding-bottom: 10px;
+  border-bottom: 1.5px solid var(--ink);
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.skills-cat::before {
+  content: '';
+  display: block;
+  width: 7px;
+  height: 7px;
+  background: var(--red);
+  flex-shrink: 0;
+}
+
+.skills-bars {
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+}
+
+.skills-bars li {
+  display: grid;
+  grid-template-columns: 1fr 1.1fr 44px;
+  gap: 18px;
+  align-items: center;
+  padding: 10px 0;
+  border-bottom: 1px dashed rgba(20,20,20,0.16);
+}
+
+.skills-bars li:last-child { border-bottom: none; }
+
+.sb-name {
+  font-family: 'Cormorant Garamond', serif;
+  font-weight: 500;
+  font-size: 1.18rem;
+  color: var(--ink);
+  letter-spacing: -.005em;
+  line-height: 1.1;
+}
+
+.sb-bar {
+  height: 2px;
+  background: var(--line);
+  position: relative;
+  overflow: hidden;
+}
+
+.sb-bar i {
+  position: absolute;
+  top: 0; left: 0;
+  height: 100%;
+  background: var(--ink);
+  display: block;
+  transform: scaleX(0);
+  transform-origin: left;
+  animation: barfill 1.4s cubic-bezier(.7,0,.2,1) forwards;
+  animation-delay: .15s;
+}
+
+@keyframes barfill { to { transform: scaleX(1); } }
+
+.sb-pct {
+  font-family: 'Anton', sans-serif;
+  font-size: 1.45rem;
+  color: var(--red);
+  text-align: right;
+  letter-spacing: .02em;
+  line-height: 1;
+}
+
+.sb-pct .pct-mark {
+  font-size: .82rem;
+  color: var(--ink);
+  margin-left: 2px;
+  font-weight: 400;
+}
+
+/* ════════ EDUCATION (full width, horizontal) ════════ */
+.edu-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 16px;
+}
+
+.edu-card {
+  display: grid;
+  grid-template-columns: 50px 1fr;
+  gap: 12px;
+  padding: 14px 14px 14px 12px;
+  background: var(--paper-soft);
+  border: 1px solid var(--line);
+  border-left: 3px solid var(--red);
+  align-items: start;
+}
+
+.year {
+  display: flex;
+  flex-direction: column;
+  font-family: 'Anton', sans-serif;
+  font-size: 1.4rem;
+  line-height: 1;
+  letter-spacing: .02em;
+  text-align: center;
+  border: 1px solid var(--ink);
+  background: var(--paper);
+}
+
+.year-top {
+  color: var(--red);
+  padding: 4px 0 1px;
+  border-bottom: 1px solid var(--ink);
+}
+
+.year-bot {
+  color: var(--ink);
+  padding: 1px 0 4px;
+}
+
+.edu-body { padding-top: 1px; }
+
+.edu-title {
+  font-family: 'Inter', sans-serif;
+  font-weight: 700;
+  font-size: .88rem;
+  color: var(--ink);
+  line-height: 1.25;
+  margin-bottom: 3px;
+}
+
+.edu-place {
+  font-family: 'Cormorant Garamond', serif;
+  font-style: italic;
+  font-weight: 500;
+  font-size: .82rem;
+  color: var(--sub);
+}
+
+/* ──────── BOTTOM SIGNATURE ──────── */
+.bottom-sig {
+  margin-top: 40px;
+  padding-top: 24px;
+  border-top: 1px dashed rgba(20,20,20,0.3);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 30px;
+  font-family: 'Cormorant Garamond', serif;
+  font-style: italic;
+  font-weight: 500;
+  font-size: 1.1rem;
+  color: var(--ink);
+  letter-spacing: .01em;
+}
+
+.bottom-sig .scribble {
+  display: inline-block;
+  width: 70px;
+  height: 22px;
+}
+
+.bottom-sig .scribble svg { width: 100%; height: 100%; }
+
+/* ──────── RESPONSIVE ──────── */
+@media (max-width: 940px) {
+  .page { padding: 40px 28px 50px; }
+  .frame { inset: 16px; }
+  .grid { grid-template-columns: 1fr; gap: 40px; }
+  .photo-wrap { min-height: 380px; }
+  .photo { width: 280px; }
+  .ghost-name { font-size: clamp(5rem, 22vw, 9rem); }
+  .signature { font-size: 3.2rem; }
+  .hero-hook { grid-template-columns: 1fr; gap: 14px; }
+  .hook-meta { text-align: left; }
+  .stats-strip { grid-template-columns: repeat(2, 1fr); }
+  .stat:nth-child(2) { border-right: none; }
+  .stat { border-bottom: 1px dashed rgba(20,20,20,0.28); }
+  .stat:nth-child(3), .stat:nth-child(4) { border-bottom: none; }
+  .about-title { font-size: 2.6rem; }
+  .about-title em { font-size: 2.2rem; }
+  .exp-block { grid-template-columns: 1fr; gap: 14px; }
+  .exp-block.featured { padding: 18px 18px; }
+  .skills-cols { grid-template-columns: 1fr; gap: 30px; }
+  .edu-grid { grid-template-columns: repeat(2, 1fr); }
+}
+
+@media (max-width: 480px) {
+  .skills-bars li { grid-template-columns: 1fr 70px 36px; gap: 10px; }
+  .sb-name { font-size: 1rem; }
+  .edu-grid { grid-template-columns: 1fr; }
+  .curriculum-title { font-size: 3.4rem; letter-spacing: .08em; }
+  .top-tag-rule { width: 30px; }
+  .top-tag-meta { display: none; }
+  .stats-strip { grid-template-columns: 1fr; }
+  .stat { border-right: none; border-bottom: 1px dashed rgba(20,20,20,0.28); }
+  .stat:last-child { border-bottom: none; }
+}
+
+/* ════════════════════════════════════════════
+   TECH LAYER — entrance, scroll, micro-interactions
+   ════════════════════════════════════════════ */
+
+/* Scroll progress bar */
+.scroll-progress {
+  position: fixed;
+  top: 0; left: 0;
+  height: 2px;
+  background: var(--red);
+  width: 0;
+  z-index: 200;
+  pointer-events: none;
+  transition: width .12s linear;
+  box-shadow: 0 0 8px rgba(209,26,42,0.5);
+}
+
+/* Reveal-on-scroll */
+[data-reveal] {
+  opacity: 0;
+  transform: translateY(28px);
+  transition: opacity 1s cubic-bezier(.2,.7,.2,1), transform 1s cubic-bezier(.2,.7,.2,1);
+  will-change: opacity, transform;
+}
+
+[data-reveal].is-visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+[data-reveal-delay="1"].is-visible { transition-delay: .08s; }
+[data-reveal-delay="2"].is-visible { transition-delay: .16s; }
+[data-reveal-delay="3"].is-visible { transition-delay: .24s; }
+[data-reveal-delay="4"].is-visible { transition-delay: .32s; }
+
+/* CURRICULUM letter rise */
+.curriculum-title .ch {
+  display: inline-block;
+  opacity: 0;
+  transform: translateY(60%);
+  animation: chRise .9s cubic-bezier(.2,.7,.2,1) forwards;
+}
+
+.curriculum-title .ch.space { width: .25em; }
+
+@keyframes chRise {
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Photo tilt (perspective container) */
+.photo-wrap { perspective: 1200px; }
+
+.photo {
+  transition: transform .55s cubic-bezier(.2,.7,.2,1);
+  transform-style: preserve-3d;
+}
+
+/* Skill bars: switch from auto-anim to scroll-trigger */
+.sb-bar i {
+  width: 0 !important;
+  animation: none !important;
+  transition: width 1.6s cubic-bezier(.7,0,.2,1);
+}
+
+.sb-bar i.is-filled {
+  width: var(--w, 100%) !important;
+}
+
+/* Hover state on skill row */
+.skills-bars li {
+  transition: padding .25s, background .25s;
+}
+
+.skills-bars li:hover {
+  padding-left: 6px;
+}
+
+.skills-bars li:hover .sb-name { color: var(--red-deep); }
+
+/* Stat counter — keep numeric reset cleanly */
+.stat-num [data-count] {
+  display: inline-block;
+  min-width: 1ch;
+  font-variant-numeric: tabular-nums;
+}
+
+/* Live status pulse */
+.live-dot {
+  display: inline-block;
+  width: 7px;
+  height: 7px;
+  background: #1aa66b;
+  border-radius: 50%;
+  margin-right: 8px;
+  vertical-align: middle;
+  position: relative;
+  box-shadow: 0 0 0 0 rgba(26, 166, 107, .7);
+  animation: livePulse 2s infinite;
+}
+
+@keyframes livePulse {
+  0%   { box-shadow: 0 0 0 0 rgba(26, 166, 107, .7); }
+  70%  { box-shadow: 0 0 0 7px rgba(26, 166, 107, 0); }
+  100% { box-shadow: 0 0 0 0 rgba(26, 166, 107, 0); }
+}
+
+/* SYS STATUS WIDGET (bottom-left) */
+.sys-status {
+  position: fixed;
+  bottom: 20px; left: 20px;
+  z-index: 99;
+  background: var(--ink);
+  color: var(--paper);
+  padding: 8px 14px;
+  font-family: 'JetBrains Mono', monospace;
+  font-size: .65rem;
+  letter-spacing: .14em;
+  text-transform: uppercase;
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+  box-shadow: 0 4px 14px rgba(0,0,0,.18);
+  pointer-events: none;
+  user-select: none;
+}
+
+.sys-status .sys-time { color: var(--red); font-weight: 500; }
+.sys-status .sep { opacity: .35; }
+
+/* Hero hook subtle gold underline animation on load */
+.hook-meta .gold {
+  position: relative;
+}
+
+.hook-meta .gold::after {
+  content: '';
+  position: absolute;
+  bottom: -3px; left: 0;
+  height: 1px;
+  width: 0;
+  background: var(--gold);
+  animation: goldDraw 1.2s cubic-bezier(.2,.7,.2,1) 1.4s forwards;
+}
+
+@keyframes goldDraw { to { width: 100%; } }
+
+/* Honor user prefs */
+@media (prefers-reduced-motion: reduce) {
+  *, *::before, *::after {
+    animation-duration: .01ms !important;
+    transition-duration: .01ms !important;
+    scroll-behavior: auto !important;
+  }
+  .curriculum-title .ch { opacity: 1; transform: none; }
+  [data-reveal] { opacity: 1; transform: none; }
+  .live-dot, .hook-meta .gold::after { animation: none; }
+}
+
+/* ════════════════════════════════════════════
+   PRINT — mirrors the on-screen layout
+   ════════════════════════════════════════════ */
+@media print {
+  @page {
+    size: A4;
+    margin: 8mm;
+  }
+
+  html, body {
+    background: var(--paper) !important;
+    color: var(--ink) !important;
+    font-size: 9pt !important;
+    line-height: 1.4 !important;
+  }
+
+  body::before, body::after { display: none !important; }
+  .print-fab,
+  .scroll-progress,
+  .sys-status { display: none !important; }
+
+  /* Disable every animation/transition for clean PDF */
+  *, *::before, *::after {
+    animation: none !important;
+    transition: none !important;
+  }
+
+  [data-reveal] { opacity: 1 !important; transform: none !important; }
+  .curriculum-title .ch { opacity: 1 !important; transform: none !important; display: inline; }
+  .photo { transform: none !important; }
+  .live-dot { box-shadow: none !important; background: #1aa66b !important; }
+  .hook-meta .gold::after { width: 100% !important; animation: none !important; }
+  .sb-bar i { width: var(--w, 100%) !important; }
+
+  .page {
+    max-width: none !important;
+    padding: 0 !important;
+    margin: 0 !important;
+  }
+
+  .frame {
+    inset: 0 !important;
+    border: 1px dashed #555 !important;
+  }
+
+  /* HEADER */
+  .top-tag {
+    font-size: 8.4pt !important;
+    margin-bottom: 2pt !important;
+  }
+
+  .top-tag-rule { width: 36pt !important; height: .8pt !important; background: var(--ink) !important; }
+  .top-tag-meta { font-size: 6.4pt !important; }
+
+  .curriculum-title {
+    font-size: 50pt !important;
+    line-height: .85 !important;
+    letter-spacing: .12em !important;
+    margin-bottom: 8pt !important;
+  }
+  .curriculum-title::after { display: none !important; }
+
+  /* HERO HOOK */
+  .hero-hook {
+    grid-template-columns: 1.2fr 1fr !important;
+    gap: 14pt !important;
+    padding: 0 0 8pt !important;
+    margin-bottom: 10pt !important;
+    border-bottom: .8pt dashed #888 !important;
+  }
+
+  .hook-line { font-size: 11pt !important; line-height: 1.25 !important; }
+  .hook-meta { font-size: 9pt !important; }
+  .hook-meta .gold { font-size: 6.8pt !important; color: var(--gold) !important; }
+
+  /* STATS */
+  .stats-strip {
+    grid-template-columns: repeat(4, 1fr) !important;
+    border-top: 1pt solid var(--ink) !important;
+    border-bottom: 1pt solid var(--ink) !important;
+    background: var(--paper-soft) !important;
+    margin-bottom: 12pt !important;
+  }
+
+  .stat {
+    padding: 7pt 8pt 6pt !important;
+    border-right: .5pt dashed #999 !important;
+  }
+  .stat:last-child { border-right: none !important; }
+
+  .stat-num { font-size: 18pt !important; line-height: 1 !important; margin-bottom: 1pt !important; }
+  .stat-num em { font-size: 10pt !important; color: var(--red) !important; }
+  .stat-label { font-size: 6.2pt !important; line-height: 1.3 !important; }
+
+  /* GRID */
+  .grid {
+    grid-template-columns: 1fr 1.4fr !important;
+    gap: 16pt !important;
+    margin-bottom: 12pt !important;
+    align-items: start !important;
+  }
+
+  /* LEFT */
+  .photo-wrap {
+    min-height: 0 !important;
+    margin-bottom: 6pt !important;
+    page-break-inside: avoid;
+  }
+
+  .photo {
+    width: 150pt !important;
+    height: auto !important;
+    filter: grayscale(100%) contrast(1.05) !important;
+  }
+
+  .ghost-name {
+    font-size: 50pt !important;
+    line-height: .85 !important;
+    -webkit-text-stroke: .8pt rgba(20,20,20,0.32) !important;
+    padding-top: 4pt !important;
+  }
+
+  .signature {
+    font-size: 26pt !important;
+    margin: -8pt 0 6pt 6pt !important;
+    color: var(--red) !important;
+  }
+
+  .identity { margin-bottom: 8pt !important; }
+  .identity-name { font-size: 15pt !important; margin-bottom: 2pt !important; }
+  .identity-role { font-size: 8.4pt !important; line-height: 1.3 !important; }
+  .identity-mark { font-size: 5.8pt !important; margin-top: 4pt !important; color: var(--gold) !important; }
+  .identity-mark::before, .identity-mark::after { background: var(--gold) !important; width: 14pt !important; }
+
+  .social {
+    gap: 3pt !important;
+    margin-bottom: 8pt !important;
+    padding: 6pt 8pt !important;
+    background: var(--paper-soft) !important;
+    border: .6pt solid var(--line) !important;
+  }
+
+  .social-row { font-size: 7.8pt !important; gap: 6pt !important; }
+  .social-icon {
+    width: 14pt !important;
+    height: 14pt !important;
+    background: var(--ink) !important;
+    color: var(--paper) !important;
+  }
+  .social-icon svg { width: 8pt !important; height: 8pt !important; }
+  .social a { border-bottom: none !important; }
+
+  .bio {
+    font-size: 8pt !important;
+    line-height: 1.42 !important;
+    margin-bottom: 8pt !important;
+  }
+  .bio p + p { margin-top: 4pt !important; }
+
+  .industries-label { font-size: 5.8pt !important; margin-bottom: 4pt !important; color: var(--gold) !important; }
+  .industries-list { gap: 3pt !important; }
+  .industries-list li {
+    font-size: 6.4pt !important;
+    padding: 2pt 5pt !important;
+    border: .6pt solid var(--ink) !important;
+  }
+
+  /* RIGHT - About column */
+  .about-col { padding-top: 0 !important; }
+  .about-head { margin-bottom: 6pt !important; }
+  .about-kicker { font-size: 6pt !important; margin-bottom: 2pt !important; color: var(--gold) !important; }
+  .about-title {
+    font-size: 22pt !important;
+    padding-bottom: 4pt !important;
+    border-bottom: .8pt solid var(--ink) !important;
+  }
+  .about-title em { font-size: 18pt !important; color: var(--red) !important; }
+
+  .bio--lead { font-size: 8pt !important; line-height: 1.5 !important; }
+  .bio--lead p + p { margin-top: 4pt !important; }
+  .bio--lead p:first-child::first-letter {
+    font-size: 22pt !important;
+    margin: 1pt 5pt 0 0 !important;
+    color: var(--ink) !important;
+  }
+
+  .industries--right {
+    margin-top: 6pt !important;
+    padding-top: 4pt !important;
+    border-top: .5pt dashed #aaa !important;
+  }
+
+  /* Services card */
+  .services-card {
+    margin-top: 8pt !important;
+    padding-top: 6pt !important;
+    border-top: .5pt dashed #aaa !important;
+    page-break-inside: avoid;
+  }
+
+  .services-kicker {
+    font-size: 6pt !important;
+    margin-bottom: 4pt !important;
+    color: var(--gold) !important;
+  }
+
+  .services-list li {
+    grid-template-columns: 18pt 1fr !important;
+    gap: 7pt !important;
+    padding: 3pt 0 !important;
+    border-bottom: .4pt dashed #bbb !important;
+  }
+
+  .srv-num {
+    font-size: 11pt !important;
+    color: var(--red) !important;
+  }
+
+  .srv-body strong {
+    font-size: 8.4pt !important;
+    margin-bottom: 1pt !important;
+  }
+
+  .srv-body span {
+    font-size: 7.3pt !important;
+    line-height: 1.35 !important;
+  }
+
+  /* Pull quote */
+  .pull-quote {
+    margin-top: 10pt !important;
+    padding: 9pt 11pt 8pt !important;
+    background: var(--ink) !important;
+    color: var(--paper) !important;
+    page-break-inside: avoid;
+  }
+
+  .pull-quote::before {
+    font-size: 24pt !important;
+    top: -8pt !important;
+    left: 6pt !important;
+    color: var(--red) !important;
+  }
+
+  .pull-quote::after {
+    width: 12pt !important;
+    height: 12pt !important;
+    border-top: 1pt solid var(--gold) !important;
+    border-right: 1pt solid var(--gold) !important;
+  }
+
+  .pull-quote p {
+    font-size: 10pt !important;
+    line-height: 1.3 !important;
+    color: var(--paper) !important;
+  }
+
+  .pull-quote p em { color: var(--red) !important; }
+
+  .pull-quote cite {
+    margin-top: 5pt !important;
+    padding-top: 4pt !important;
+    border-top: .5pt solid #333 !important;
+    font-size: 6.4pt !important;
+    color: #999 !important;
+  }
+
+  .section { margin-bottom: 8pt !important; }
+
+  .section-title { font-size: 14pt !important; }
+  .section-sub {
+    font-size: 8.4pt !important;
+    margin-bottom: 6pt !important;
+    padding-bottom: 3pt !important;
+    border-bottom: .6pt dashed #999 !important;
+  }
+
+  /* EXPERIENCE — full-width 2-col internal */
+  .exp-section .exp-list { gap: 0 !important; }
+
+  .exp-block {
+    display: grid !important;
+    grid-template-columns: 110pt 1fr !important;
+    gap: 14pt !important;
+    page-break-inside: avoid;
+    padding: 6pt 0 !important;
+    border-bottom: .5pt dashed #aaa !important;
+    align-items: start !important;
+  }
+
+  .exp-block:first-child { padding-top: 2pt !important; }
+  .exp-block:last-child { border-bottom: none !important; }
+
+  .exp-block.featured {
+    background: var(--paper-soft) !important;
+    border: .6pt solid var(--line) !important;
+    border-left: 2pt solid var(--red) !important;
+    padding: 7pt 9pt !important;
+    margin: 4pt 0 !important;
+  }
+
+  .exp-meta { padding-top: 1pt !important; }
+  .exp-content { min-width: 0 !important; }
+
+  .exp-head { font-size: 9.2pt !important; }
+  .exp-head .place {
+    background: var(--ink) !important;
+    color: var(--paper) !important;
+    padding: .5pt 5pt !important;
+    font-size: 6.8pt !important;
+  }
+  .exp-head .sep { color: var(--red) !important; }
+  .exp-role { font-size: 8.2pt !important; margin-bottom: 2pt !important; }
+  .exp-desc { font-size: 7.9pt !important; line-height: 1.38 !important; margin-bottom: 2pt !important; }
+  .exp-bullets { margin: 2pt 0 !important; gap: 1pt !important; }
+  .exp-bullets li {
+    font-size: 7.5pt !important;
+    line-height: 1.32 !important;
+    padding-left: 9pt !important;
+  }
+  .exp-bullets li::before { width: 5pt !important; height: .6pt !important; background: var(--red) !important; }
+
+  .exp-period {
+    font-size: 7pt !important;
+    color: var(--red) !important;
+    padding: 1pt 0 0 !important;
+  }
+
+  .result, .exp-desc .result, .exp-bullets .result {
+    background: linear-gradient(transparent 60%, rgba(209, 26, 42, 0.22) 60%) !important;
+  }
+
+  /* FULL SECTIONS */
+  .full-section {
+    margin-top: 10pt !important;
+    padding-top: 8pt !important;
+    border-top: 1pt solid var(--ink) !important;
+    page-break-inside: avoid;
+  }
+
+  .full-section .section-head {
+    margin-bottom: 6pt !important;
+    padding-bottom: 4pt !important;
+    border-bottom: .6pt dashed #999 !important;
+  }
+
+  .full-section .section-title { font-size: 16pt !important; margin-bottom: 1pt !important; }
+  .full-section .section-sub { font-size: 8pt !important; }
+
+  /* SKILL BARS */
+  .skills-cols {
+    grid-template-columns: 1fr 1fr !important;
+    gap: 18pt !important;
+  }
+
+  .skills-cat {
+    font-size: 6.4pt !important;
+    margin: 0 0 5pt !important;
+    padding-bottom: 3pt !important;
+    border-bottom: .8pt solid var(--ink) !important;
+    color: var(--red) !important;
+  }
+
+  .skills-cat::before {
+    width: 4pt !important;
+    height: 4pt !important;
+    background: var(--red) !important;
+  }
+
+  .skills-bars li {
+    grid-template-columns: 1fr 1.05fr 22pt !important;
+    gap: 8pt !important;
+    padding: 2.5pt 0 !important;
+    border-bottom: .5pt dashed #aaa !important;
+    page-break-inside: avoid;
+  }
+
+  .sb-name { font-size: 8.4pt !important; }
+
+  .sb-bar {
+    height: 1pt !important;
+    background: var(--line) !important;
+  }
+
+  .sb-bar i {
+    background: var(--ink) !important;
+    transform: scaleX(1) !important;
+    animation: none !important;
+  }
+
+  .sb-pct {
+    font-size: 10pt !important;
+    color: var(--red) !important;
+  }
+
+  /* EDUCATION */
+  .edu-grid {
+    grid-template-columns: repeat(4, 1fr) !important;
+    gap: 5pt !important;
+  }
+
+  .edu-card {
+    grid-template-columns: 30pt 1fr !important;
+    gap: 6pt !important;
+    padding: 5pt 6pt 5pt 5pt !important;
+    background: var(--paper-soft) !important;
+    border: .6pt solid var(--line) !important;
+    border-left: 1.5pt solid var(--red) !important;
+    page-break-inside: avoid;
+  }
+
+  .year { font-size: 9.5pt !important; border: .6pt solid var(--ink) !important; background: var(--paper) !important; }
+  .year-top { color: var(--red) !important; padding: 1.5pt 0 0 !important; border-bottom: .5pt solid var(--ink) !important; }
+  .year-bot { color: var(--ink) !important; padding: 0 0 1.5pt !important; }
+
+  .edu-title { font-size: 7.4pt !important; line-height: 1.22 !important; margin-bottom: 1.5pt !important; }
+  .edu-place { font-size: 7pt !important; }
+
+  /* BOTTOM SIGNATURE */
+  .bottom-sig {
+    margin-top: 12pt !important;
+    padding-top: 6pt !important;
+    font-size: 9pt !important;
+    border-top: .6pt dashed #999 !important;
+    page-break-inside: avoid;
+    gap: 18pt !important;
+  }
+  .bottom-sig .scribble { width: 40pt !important; height: 12pt !important; }
+
+  h1, h2, h3 { page-break-after: avoid; }
+  img { page-break-inside: avoid; }
+  ul, ol { page-break-inside: avoid; }
+
+  .skill-box:hover { background: var(--paper-soft) !important; }
+  .skill-box:hover .skill-name { color: var(--ink) !important; }
+  .skill-box:hover .skill-icon { background: var(--ink) !important; color: var(--paper) !important; }
+}
+</style>
+</head>
+<body>
+
+<div class="scroll-progress" id="scrollProgress"></div>
+
+<button class="print-fab" onclick="window.print()" title="Imprimir / Descargar PDF para RH">
+  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M6 9V2h12v7M6 18H4a2 2 0 0 1-2-2v-5a2 2 0 0 1 2-2h16a2 2 0 0 1 2 2v5a2 2 0 0 1-2 2h-2M6 14h12v8H6z"/></svg>
+  Imprimir / PDF
+</button>
+
+<div class="sys-status">
+  <span class="live-dot"></span>
+  <span>Sistema activo</span>
+  <span class="sep">·</span>
+  <span class="sys-time" id="sysTime">--:--</span>
+</div>
+
+<div class="page">
+  <div class="frame"></div>
+
+  <!-- ─── HEADER ─── -->
+  <header>
+    <div class="top-tag">
+      <span class="top-tag-rule"></span>
+      <em>Resumen / Hoja de vida</em>
+      <span class="top-tag-meta">REF · IR-2026 · CDMX</span>
+    </div>
+    <h1 class="curriculum-title">Curriculum</h1>
+  </header>
+
+  <!-- ─── HERO HOOK ─── -->
+  <section class="hero-hook" data-reveal data-reveal-delay="1">
+    <p class="hook-line">
+      Convierto pipelines tibios en <em>operaciones high-ticket</em> que cierran solas — diseño los embudos, los sistemas y la <strong>IA</strong> que los hace escalar.
+    </p>
+    <p class="hook-meta">
+      Estratega Comercial &amp; Arquitecto<br>de Ecosistemas Digitales
+      <span class="gold"><span class="live-dot"></span>Disponible inmediato</span>
+    </p>
+  </section>
+
+  <!-- ─── STATS STRIP ─── -->
+  <section class="stats-strip" data-reveal>
+    <div class="stat">
+      <div class="stat-num"><span data-count="10">10</span><em>+</em></div>
+      <div class="stat-label">Años high-ticket<br>RE · Banca · FinTech</div>
+    </div>
+    <div class="stat">
+      <div class="stat-num"><span data-count="100">100</span><em>%</em></div>
+      <div class="stat-label">Cuota superada<br>de forma ininterrumpida</div>
+    </div>
+    <div class="stat">
+      <div class="stat-num"><span data-count="5">5</span><em>×</em></div>
+      <div class="stat-label">Promociones ION<br>Telemarketing → Gerencia</div>
+    </div>
+    <div class="stat">
+      <div class="stat-num">+<span data-count="10">10</span><em>K</em></div>
+      <div class="stat-label">Asistentes evento<br>Arena CDMX · sistema IA</div>
+    </div>
+  </section>
+
+  <!-- ─── MAIN GRID ─── -->
+  <div class="grid" data-reveal>
+
+    <!-- ═════ LEFT ═════ -->
+    <section class="left">
+
+      <div class="photo-wrap">
+        <div class="ghost-name" aria-hidden="true">
+          <span>IS</span>
+          <span>MA</span>
+          <span>EL</span>
+        </div>
+        <img class="photo" src="foto.png" alt="Ismael Rios" onerror="this.style.display='none'">
+      </div>
+
+      <div class="signature">Ismael</div>
+
+      <div class="identity">
+        <h2 class="identity-name">Ismael Rios</h2>
+        <p class="identity-role">Estratega Comercial &amp;<br>Arquitecto de Ecosistemas Digitales</p>
+        <span class="identity-mark">CDMX · MX</span>
+      </div>
+
+      <div class="social">
+        <div class="social-row">
+          <span class="social-icon">
+            <svg viewBox="0 0 24 24"><path d="M12 2a10 10 0 1 0 10 10A10 10 0 0 0 12 2m6.93 6h-2.95a15.65 15.65 0 0 0-1.38-3.56A8.03 8.03 0 0 1 18.93 8M12 4.04c.83 1.2 1.48 2.53 1.91 3.96h-3.82c.43-1.43 1.08-2.76 1.91-3.96M4.26 14a7.81 7.81 0 0 1 0-4h3.38a16.55 16.55 0 0 0 0 4m.82 2h2.95a15.65 15.65 0 0 0 1.38 3.56A7.99 7.99 0 0 1 5.08 16m2.95-8H5.08a7.99 7.99 0 0 1 4.33-3.56A15.65 15.65 0 0 0 8.03 8M12 19.96c-.83-1.2-1.48-2.53-1.91-3.96h3.82c-.43 1.43-1.08 2.76-1.91 3.96M14.34 14H9.66a14.4 14.4 0 0 1-.16-2 14.4 14.4 0 0 1 .16-2h4.68a14.4 14.4 0 0 1 .16 2 14.4 14.4 0 0 1-.16 2m.25 5.56A15.65 15.65 0 0 0 15.97 16h2.95a8.03 8.03 0 0 1-4.33 3.56M16.36 14a16.55 16.55 0 0 0 0-4h3.38a7.81 7.81 0 0 1 0 4z"/></svg>
+          </span>
+          <a href="https://zivcreativo.shop" target="_blank" rel="noopener">zivcreativo.shop</a>
+        </div>
+        <div class="social-row">
+          <span class="social-icon">
+            <svg viewBox="0 0 24 24"><path d="M19 3a2 2 0 0 1 2 2v14a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h14m-.5 15.5v-5.3a3.26 3.26 0 0 0-3.26-3.26c-.85 0-1.84.52-2.32 1.3v-1.11h-2.79v8.37h2.79v-4.93c0-.77.62-1.4 1.39-1.4a1.4 1.4 0 0 1 1.4 1.4v4.93h2.79M6.88 8.56a1.68 1.68 0 0 0 1.68-1.68c0-.93-.75-1.69-1.68-1.69a1.69 1.69 0 0 0-1.69 1.69c0 .93.76 1.68 1.69 1.68m1.39 9.94v-8.37H5.5v8.37h2.77z"/></svg>
+          </span>
+          <a href="#">Ismael Rios</a>
+        </div>
+        <div class="social-row">
+          <span class="social-icon">
+            <svg viewBox="0 0 24 24"><path d="M6.62 10.79a15.05 15.05 0 0 0 6.59 6.59l2.2-2.2a1 1 0 0 1 1.05-.24c1.12.37 2.33.57 3.57.57.55 0 1 .45 1 1V20c0 .55-.45 1-1 1A17 17 0 0 1 3 4c0-.55.45-1 1-1h3.5c.55 0 1 .45 1 1 0 1.25.2 2.45.57 3.57.11.35.03.74-.25 1.02l-2.2 2.2z"/></svg>
+          </span>
+          <a href="tel:+525540161213">+52 55 4016 1213</a>
+        </div>
+        <div class="social-row">
+          <span class="social-icon">
+            <svg viewBox="0 0 24 24"><path d="M20 4H4c-1.1 0-1.99.9-1.99 2L2 18c0 1.1.9 2 2 2h16c1.1 0 2-.9 2-2V6c0-1.1-.9-2-2-2zm0 4-8 5-8-5V6l8 5 8-5v2z"/></svg>
+          </span>
+          <a href="mailto:riosdigitali@gmail.com">riosdigitali@gmail.com</a>
+        </div>
+      </div>
+
+    </section>
+
+    <!-- ═════ RIGHT — SOBRE MÍ ═════ -->
+    <section class="right about-col">
+
+      <div class="about-head">
+        <p class="about-kicker">— Perfil</p>
+        <h3 class="about-title">Sobre <em>mí</em></h3>
+      </div>
+
+      <div class="bio bio--lead">
+        <p>
+          Soy <strong>Ismael Rios</strong>, ejecutivo comercial y arquitecto de ecosistemas digitales con +10 años cerrando ventas high-ticket en real estate, banca y fintech. Combino el instinto comercial de calle con la capacidad técnica de construir los embudos, CRMs e integraciones que multiplican la conversión.
+        </p>
+        <p>
+          <strong>Diseño de contenido que vende:</strong> hooks que enganchan en los primeros segundos, <em>carruseles</em>, scripts y narrativa de marca alineada al embudo. Cada pieza pensada para <em>convertir, no para entretener</em>.
+        </p>
+        <p>
+          <strong>Dominio profundo en IA:</strong> tengo <em>varias tecnologías desarrolladas</em> sobre modelos de lenguaje — agentes de comunicación, sistemas de control y automatizaciones que operan en producción para clientes reales y eventos masivos.
+        </p>
+        <p>
+          En <em>ION Tu Casa</em> escalé de telemarketing a Gerencia Comercial en 3 años como Top Closer histórico. Hoy diseño sistemas de venta automatizados end-to-end — de la estrategia al código.
+        </p>
+      </div>
+
+      <div class="industries industries--right">
+        <div class="industries-label">— Industrias</div>
+        <ul class="industries-list">
+          <li>PropTech</li>
+          <li>FinTech</li>
+          <li>Real Estate</li>
+          <li>Banca</li>
+          <li>E-commerce</li>
+          <li>Eventos</li>
+          <li>Retail</li>
+        </ul>
+      </div>
+
+      <!-- ── Servicios / Lo que entrego ── -->
+      <aside class="services-card">
+        <div class="services-kicker">— Lo que entrego</div>
+        <ul class="services-list">
+          <li>
+            <span class="srv-num">01</span>
+            <div class="srv-body">
+              <strong>Ecosistemas digitales premium</strong>
+              <span>Landing + tienda + chatbot + embudo en un solo sistema cohesionado.</span>
+            </div>
+          </li>
+          <li>
+            <span class="srv-num">02</span>
+            <div class="srv-body">
+              <strong>Sistemas con IA en producción</strong>
+              <span>Agentes de comunicación, control y automatización para clientes reales y eventos masivos.</span>
+            </div>
+          </li>
+          <li>
+            <span class="srv-num">03</span>
+            <div class="srv-body">
+              <strong>Contenido que vende</strong>
+              <span>Hooks, carruseles, scripts y narrativa de marca alineada al embudo.</span>
+            </div>
+          </li>
+          <li>
+            <span class="srv-num">04</span>
+            <div class="srv-body">
+              <strong>CRMs &amp; automatización</strong>
+              <span>GoHighLevel, HubSpot, Make, n8n — nurturing y reducción de tiempo de cierre.</span>
+            </div>
+          </li>
+          <li>
+            <span class="srv-num">05</span>
+            <div class="srv-body">
+              <strong>Cierre high-ticket</strong>
+              <span>Real estate, banca, fintech. Cuota superada de forma ininterrumpida.</span>
+            </div>
+          </li>
+        </ul>
+      </aside>
+
+      <!-- ── Pull Quote ── -->
+      <blockquote class="pull-quote">
+        <p>No optimizo sistemas de venta. Evoluciono el contenido y la experiencia — hasta que tu usuario <em>sienta que comprarte fue idea suya</em>.</p>
+        <cite>— Ismael Rios · 2026</cite>
+      </blockquote>
+
+    </section>
+  </div>
+
+  <!-- ═════ FULL: EXP. PROFESIONAL ═════ -->
+  <section class="full-section exp-section" id="experience" data-reveal>
+    <div class="section-head">
+      <h3 class="section-title">Exp. Profesional</h3>
+      <p class="section-sub"><em>Professional Experience · 2014 — Hoy</em></p>
+    </div>
+
+    <div class="exp-list">
+
+      <!-- Featured: ZIV -->
+      <article class="exp-block featured">
+        <div class="exp-meta">
+          <div class="exp-head">ZIV Creativo <span class="sep">/</span> <span class="place">CDMX</span></div>
+          <div class="exp-role">Fundador · Director de Estrategia Digital</div>
+          <div class="exp-period">2024 — Hoy</div>
+        </div>
+        <div class="exp-content">
+          <div class="exp-desc">
+            Agencia de ecosistemas digitales premium. Embudos end-to-end con IA, CRMs en GoHighLevel/HubSpot, marketing y contenido alineado para <span class="result">conversión consistente en cada punto de contacto</span>. Modelo construido sobre infraestructura de bajo costo (GitHub Pages, Supabase, n8n) con márgenes de nivel enterprise.
+          </div>
+        </div>
+      </article>
+
+      <article class="exp-block">
+        <div class="exp-meta">
+          <div class="exp-head">Evento Masivo <span class="sep">/</span> <span class="place">Arena CDMX</span></div>
+          <div class="exp-role">Director Creativo &amp; Arquitecto Digital · Sistemas IA</div>
+          <div class="exp-period">2025 — Hoy</div>
+        </div>
+        <div class="exp-content">
+          <div class="exp-desc">SPA unificado para evento de <strong>+10K asistentes</strong>: landing + tienda (11 SKUs) + credenciales digitales + comunicación con asistentes. <span class="result">Construido sin CMS, sin plataforma de e-commerce, sin agencia externa</span>.</div>
+          <ul class="exp-bullets">
+            <li><strong>Comunicación con asistentes <span class="result">funcional con IA</span>:</strong> respuestas automáticas, segmentación y soporte 24/7 sin intervención humana.</li>
+            <li><strong>Sistemas de control operados con IA:</strong> validación de acceso, gestión de roles (embajadoras, asistentes, staff) y monitoreo en tiempo real.</li>
+            <li>Tienda integrada con carrito drawer y checkout vía WhatsApp — proceso de compra completo sin pasarela externa.</li>
+            <li>Animaciones scroll-driven, countdown y rutas SPA construidas desde cero en HTML/CSS/JS puro.</li>
+          </ul>
+        </div>
+      </article>
+
+      <article class="exp-block">
+        <div class="exp-meta">
+          <div class="exp-head">ION Tu Casa <span class="sep">/</span> <span class="place">FinTech / PropTech</span></div>
+          <div class="exp-role">Gerente Comercial Institucional · Autofinanciamiento Inmobiliario</div>
+          <div class="exp-period">2021 — 2024</div>
+        </div>
+        <div class="exp-content">
+          <div class="exp-desc">Especialista en <strong>autofinanciamiento inmobiliario</strong>: el cliente reúne progresivamente un enganche-meta y al alcanzarlo recibe el financiamiento para adquirir su vivienda. <span class="result">Ascenso completo en 3 años:</span> Telemarketing → Jr. → Sr. → Master → Gerencia.</div>
+          <ul class="exp-bullets">
+            <li><strong>Cotizadores propios</strong> y planes de financiamiento personalizados por perfil de cliente y proyecto.</li>
+            <li><strong>Contenido comercial</strong> y herramientas de soporte a ventas para acelerar el cierre del equipo.</li>
+            <li>Colaboración con <strong>desarrolladoras inmobiliarias en CDMX</strong> para evolucionar el sistema y la estrategia.</li>
+            <li><span class="result">Automatización de procesos</span> de calificación, seguimiento y cierre — menos fricción operativa.</li>
+            <li>Top Closer histórico con cuota superada de manera ininterrumpida; mentoría y formación del equipo comercial.</li>
+          </ul>
+        </div>
+      </article>
+
+      <article class="exp-block">
+        <div class="exp-meta">
+          <div class="exp-head">Banco Santander <span class="sep">/</span> <span class="place">Banca</span></div>
+          <div class="exp-role">Asesor de Servicios Financieros · Cartera</div>
+          <div class="exp-period">2019 — 2021</div>
+        </div>
+        <div class="exp-content">
+          <div class="exp-desc">Asesor multiproducto con licencia para colocación de la <strong>suite completa</strong> de servicios financieros bajo KPIs corporativos estrictos, cross-selling y retención sobre cartera asignada.</div>
+          <ul class="exp-bullets">
+            <li><strong>Crédito:</strong> tarjetas, créditos personales, de nómina, hipotecarios y automotrices.</li>
+            <li><strong>Protección:</strong> seguros de vida, auto, hogar, GMM y protección de cartera.</li>
+            <li><strong>Captación:</strong> nómina, ahorro, inversión y portafolios premium.</li>
+            <li>Primer contacto con sistemas <strong>CRM institucionales</strong> y compliance en venta regulada.</li>
+          </ul>
+        </div>
+      </article>
+
+      <article class="exp-block">
+        <div class="exp-meta">
+          <div class="exp-head">Realta Inmobiliaria <span class="sep">/</span> <span class="place">Real Estate</span></div>
+          <div class="exp-role">Ejecutivo Inmobiliario End-to-End</div>
+          <div class="exp-period">2017 — 2019</div>
+        </div>
+        <div class="exp-content">
+          <div class="exp-desc">Ciclo completo: captación exclusiva, prospección, match-making, negociación y escrituración. <span class="result">Gestión del proceso notarial y legal de principio a fin</span> — incluyendo documentación, contratos y entrega de llaves.</div>
+        </div>
+      </article>
+
+      <article class="exp-block">
+        <div class="exp-meta">
+          <div class="exp-head">Urban Textil Lab <span class="sep">/</span> <span class="place">Manufactura · Familiar</span></div>
+          <div class="exp-role">Director de Operaciones</div>
+          <div class="exp-period">2014 — 2017</div>
+        </div>
+        <div class="exp-content">
+          <div class="exp-desc"><strong>Negocio familiar.</strong> Junto con mi hermano dirigí la producción completa con un volumen de <span class="result">miles de prendas a la semana</span> entre Monterrey y CDMX.</div>
+          <ul class="exp-bullets">
+            <li><strong>Corte:</strong> envío y supervisión de piezas según ficha técnica.</li>
+            <li><strong>Maquila:</strong> localización, selección y gestión de maquileros.</li>
+            <li><strong>Lavandería industrial · Terminado:</strong> teñido, etiquetado, empaque y QC.</li>
+            <li><strong>Logística:</strong> producción de envíos semanales a Mty y CDMX.</li>
+          </ul>
+        </div>
+      </article>
+
+    </div>
+  </section>
+
+  <!-- ═════ FULL: HABILIDADES ═════ -->
+  <section class="full-section" id="skills" data-reveal>
+    <div class="section-head">
+      <h3 class="section-title">Habilidades</h3>
+      <p class="section-sub"><em>Skills &amp; Stack</em></p>
+    </div>
+
+    <div class="skills-cols">
+
+      <!-- Columna 1: Core -->
+      <div class="skills-block">
+        <p class="skills-cat">Core · Comercial &amp; Estrategia</p>
+        <ul class="skills-bars">
+          <li><span class="sb-name">High-Ticket Closing</span><span class="sb-bar"><i style="--w:97%;"></i></span><span class="sb-pct">97</span></li>
+          <li><span class="sb-name">Embudos de Venta</span><span class="sb-bar"><i style="--w:93%;"></i></span><span class="sb-pct">93</span></li>
+          <li><span class="sb-name">Estrategia Digital</span><span class="sb-bar"><i style="--w:92%;"></i></span><span class="sb-pct">92</span></li>
+          <li><span class="sb-name">CRM &amp; Automatización</span><span class="sb-bar"><i style="--w:90%;"></i></span><span class="sb-pct">90</span></li>
+          <li><span class="sb-name">Liderazgo Comercial</span><span class="sb-bar"><i style="--w:88%;"></i></span><span class="sb-pct">88</span></li>
+          <li><span class="sb-name">Prompt Eng. · IA</span><span class="sb-bar"><i style="--w:87%;"></i></span><span class="sb-pct">87</span></li>
+          <li><span class="sb-name">UX/UI &amp; CRO</span><span class="sb-bar"><i style="--w:85%;"></i></span><span class="sb-pct">85</span></li>
+        </ul>
+      </div>
+
+      <!-- Columna 2: Stack -->
+      <div class="skills-block">
+        <p class="skills-cat">Stack · Herramientas en producción</p>
+        <ul class="skills-bars">
+          <li><span class="sb-name">GoHighLevel</span><span class="sb-bar"><i style="--w:92%;"></i></span><span class="sb-pct">92</span></li>
+          <li><span class="sb-name">HubSpot</span><span class="sb-bar"><i style="--w:90%;"></i></span><span class="sb-pct">90</span></li>
+          <li><span class="sb-name">Make</span><span class="sb-bar"><i style="--w:85%;"></i></span><span class="sb-pct">85</span></li>
+          <li><span class="sb-name">HTML / CSS / JS</span><span class="sb-bar"><i style="--w:82%;"></i></span><span class="sb-pct">82</span></li>
+          <li><span class="sb-name">n8n</span><span class="sb-bar"><i style="--w:80%;"></i></span><span class="sb-pct">80</span></li>
+          <li><span class="sb-name">ManyChat</span><span class="sb-bar"><i style="--w:80%;"></i></span><span class="sb-pct">80</span></li>
+          <li><span class="sb-name">Brevo</span><span class="sb-bar"><i style="--w:78%;"></i></span><span class="sb-pct">78</span></li>
+          <li><span class="sb-name">GitHub Pages</span><span class="sb-bar"><i style="--w:76%;"></i></span><span class="sb-pct">76</span></li>
+          <li><span class="sb-name">Supabase</span><span class="sb-bar"><i style="--w:75%;"></i></span><span class="sb-pct">75</span></li>
+        </ul>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- ═════ FULL: EDUCACIÓN ═════ -->
+  <section class="full-section" id="education" data-reveal>
+    <div class="section-head">
+      <h3 class="section-title">Educación</h3>
+      <p class="section-sub"><em>Education &amp; Certifications</em></p>
+    </div>
+
+    <div class="edu-grid">
+      <div class="edu-card">
+        <div class="year"><span class="year-top">20</span><span class="year-bot">22</span></div>
+        <div class="edu-body">
+          <div class="edu-title">Google UX Design Certificate</div>
+          <div class="edu-place">Google · Coursera</div>
+        </div>
+      </div>
+      <div class="edu-card">
+        <div class="year"><span class="year-top">20</span><span class="year-bot">23</span></div>
+        <div class="edu-body">
+          <div class="edu-title">HubSpot Sales Hub · Meta Marketing</div>
+          <div class="edu-place">HubSpot Academy &amp; Meta Blueprint</div>
+        </div>
+      </div>
+      <div class="edu-card">
+        <div class="year"><span class="year-top">20</span><span class="year-bot">24</span></div>
+        <div class="edu-body">
+          <div class="edu-title">GoHighLevel Admin · AI For Everyone</div>
+          <div class="edu-place">HighLevel · Andrew Ng / Coursera</div>
+        </div>
+      </div>
+      <div class="edu-card">
+        <div class="year"><span class="year-top">20</span><span class="year-bot">25</span></div>
+        <div class="edu-body">
+          <div class="edu-title">JavaScript Algorithms · Scrum</div>
+          <div class="edu-place">freeCodeCamp · SCRUMstudy</div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ─── BOTTOM SIGNATURE ─── -->
+  <div class="bottom-sig">
+    <span>Ismael</span>
+    <span class="scribble">
+      <svg viewBox="0 0 80 24" fill="none" stroke="#d11a2a" stroke-width="2.2" stroke-linecap="round">
+        <path d="M4 16 C 14 4, 26 22, 36 10 S 58 18, 70 8 L 76 14"/>
+        <path d="M10 20 L 70 6" stroke-width="1.4" opacity=".7"/>
+      </svg>
+    </span>
+    <span>Rios</span>
+  </div>
+
+</div>
+
+<script>
+(function () {
+  const reduceMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+
+  /* ──── 1. CURRICULUM letter-rise ──── */
+  const titleEl = document.querySelector('.curriculum-title');
+  if (titleEl && !reduceMotion) {
+    const text = titleEl.textContent;
+    titleEl.textContent = '';
+    [...text].forEach((c, i) => {
+      const span = document.createElement('span');
+      span.className = 'ch' + (c === ' ' ? ' space' : '');
+      span.textContent = c;
+      span.style.animationDelay = (0.06 * i + 0.15) + 's';
+      titleEl.appendChild(span);
+    });
+  }
+
+  /* ──── 2. Scroll progress bar ──── */
+  const bar = document.getElementById('scrollProgress');
+  if (bar) {
+    const onScroll = () => {
+      const max = document.documentElement.scrollHeight - window.innerHeight;
+      const pct = max > 0 ? (window.scrollY / max) * 100 : 0;
+      bar.style.width = pct + '%';
+    };
+    window.addEventListener('scroll', onScroll, { passive: true });
+    onScroll();
+  }
+
+  /* ──── 3. Reveal-on-scroll ──── */
+  const revealEls = document.querySelectorAll('[data-reveal]');
+  if ('IntersectionObserver' in window) {
+    const io = new IntersectionObserver((entries) => {
+      entries.forEach(e => {
+        if (e.isIntersecting) {
+          e.target.classList.add('is-visible');
+          io.unobserve(e.target);
+        }
+      });
+    }, { threshold: 0.1, rootMargin: '0px 0px -60px 0px' });
+    revealEls.forEach(el => io.observe(el));
+  } else {
+    revealEls.forEach(el => el.classList.add('is-visible'));
+  }
+
+  /* ──── 4. Stat number counters ──── */
+  const counters = document.querySelectorAll('[data-count]');
+  const countTo = (el) => {
+    const target = parseInt(el.dataset.count, 10);
+    if (isNaN(target)) return;
+    const duration = 1500;
+    const start = performance.now();
+    const tick = (now) => {
+      const t = Math.min((now - start) / duration, 1);
+      const eased = 1 - Math.pow(1 - t, 3);
+      el.textContent = Math.floor(target * eased);
+      if (t < 1) requestAnimationFrame(tick);
+      else el.textContent = target;
+    };
+    requestAnimationFrame(tick);
+  };
+
+  if ('IntersectionObserver' in window && !reduceMotion) {
+    const cio = new IntersectionObserver((entries) => {
+      entries.forEach(e => {
+        if (e.isIntersecting) {
+          countTo(e.target);
+          cio.unobserve(e.target);
+        }
+      });
+    }, { threshold: 0.45 });
+    counters.forEach(c => { c.textContent = '0'; cio.observe(c); });
+  }
+
+  /* ──── 5. Skill bars on-scroll ──── */
+  const skillBars = document.querySelectorAll('.sb-bar i');
+  if ('IntersectionObserver' in window) {
+    const sio = new IntersectionObserver((entries) => {
+      entries.forEach(e => {
+        if (e.isIntersecting) {
+          // small stagger by index within its parent list
+          const li = e.target.closest('li');
+          const list = li ? li.parentElement : null;
+          const idx = list ? Array.from(list.children).indexOf(li) : 0;
+          setTimeout(() => e.target.classList.add('is-filled'), idx * 70);
+          sio.unobserve(e.target);
+        }
+      });
+    }, { threshold: 0.4 });
+    skillBars.forEach(b => sio.observe(b));
+  } else {
+    skillBars.forEach(b => b.classList.add('is-filled'));
+  }
+
+  /* ──── 6. Photo subtle 3D tilt ──── */
+  const photoWrap = document.querySelector('.photo-wrap');
+  const photoImg = document.querySelector('.photo');
+  const canHover = window.matchMedia('(hover: hover) and (pointer: fine)').matches;
+
+  if (photoWrap && photoImg && canHover && !reduceMotion) {
+    let raf;
+    photoWrap.addEventListener('mousemove', (e) => {
+      const rect = photoWrap.getBoundingClientRect();
+      const cx = (e.clientX - rect.left) / rect.width - 0.5;
+      const cy = (e.clientY - rect.top) / rect.height - 0.5;
+      cancelAnimationFrame(raf);
+      raf = requestAnimationFrame(() => {
+        photoImg.style.transform =
+          `translate3d(${cx * 8}px, ${cy * 6}px, 0) rotateX(${cy * -3.5}deg) rotateY(${cx * 3.5}deg)`;
+      });
+    });
+    photoWrap.addEventListener('mouseleave', () => {
+      photoImg.style.transform = '';
+    });
+  }
+
+  /* ──── 7. Live system clock ──── */
+  const clk = document.getElementById('sysTime');
+  if (clk) {
+    const tick = () => {
+      const d = new Date();
+      const hh = String(d.getHours()).padStart(2, '0');
+      const mm = String(d.getMinutes()).padStart(2, '0');
+      const ss = String(d.getSeconds()).padStart(2, '0');
+      clk.textContent = hh + ':' + mm + ':' + ss;
+    };
+    tick();
+    setInterval(tick, 1000);
+  }
+})();
+</script>
+
+</body>
+</html>
